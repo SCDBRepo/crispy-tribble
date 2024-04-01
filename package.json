@@ -1,18 +1,86 @@
 {
-  "name": "@utilcode/simple-template-advanced",
+  "name": "@scdb/crispy-tribble",
+  "description": "Fast & forgiving HTML/XML parser",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "thestrangedev",
   "license": "MIT",
+  "sideEffects": false,
+  "keywords": [
+    "html",
+    "parser",
+    "streams",
+    "xml",
+    "dom",
+    "rss",
+    "feed",
+    "atom"
+  ],
+  "directories": {
+    "lib": "lib/"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/esm/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/esm/index.js"
+    },
+    "./lib/WritableStream": {
+      "require": "./lib/WritableStream.js",
+      "import": "./lib/esm/WritableStream.js"
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@scdb/curly-robot": "^1.0.0",
+    "@scdb/didactic-spoon": "^1.0.0",
+    "@scdb/friendly-octo-couscous": "^1.0.4",
+    "@scdb/silver-octo-meme": "^1.0.1",
+    "@scdb/simple-http": "^1.0.7",
+    "@scdb/urban-octo-garbanzo": "^1.0.0",
+    "domelementtype": "^2.3.0",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.1.0",
+    "entities": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.2",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.4",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageProvider": "v8",
+    "moduleNameMapper": {
+      "^(.*)\\.js$": [
+        "$1",
+        "$1.js"
+      ]
+    }
+  },
+  "prettier": {
+    "tabWidth": 4
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/utilcode/simple-template.git"
+    "url": "https://github.com/SCDBRepo/crispy-tribble.git"
   },
-  "dependencies": {
-    "axios": "^1.6.8"
+  "homepage": "https://github.com/SCDBRepo/crispy-tribble/#readme",
+  "bugs": {
+    "url": "https://github.com/SCDBRepo/crispy-tribble/issues"
   }
 }
